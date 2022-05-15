@@ -1,0 +1,10 @@
+#ifndef DISPLAY_H
+#define DISPLAY_H
+#include "eadk.h"
+#define DISPLAY_WIDTH 320
+#define DISPLAY_HEIGHT 240
+#define DISPLAY_PIXELS 76800
+#define DISPLAY_COMMON_VERTICAL_MARGIN 20
+#define DISPLAY_COMMON_HORIZONTAL_MARGIN 20
+extern const Rect DISPLAY_RECT;
+#endif
