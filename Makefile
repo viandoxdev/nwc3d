@@ -5,6 +5,8 @@ BUILD_DIR = target
 GCC=arm-hardfloat-eabi-gcc
 AS=arm-hardfloat-eabi-as
 
+$(shell mkdir -p $(BUILD_DIR)/src/math $(BUILD_DIR)/eadk)
+
 define object_for
 $(addprefix $(BUILD_DIR)/,$(addsuffix .o,$(basename $(1))))
 endef
@@ -19,6 +21,18 @@ src = $(addprefix src/,\
   vector.c \
   framebuffer.c \
   pool.c \
+  math/e_rem_pio2f.c \
+  math/k_cosf.c \
+  math/k_rem_pio2f.c \
+  math/k_sinf.c \
+  math/k_tanf.c \
+  math/s_copysignf.c \
+  math/s_cosf.c \
+  math/s_fabsf.c \
+  math/s_floorf.c \
+  math/s_scalbnf.c \
+  math/s_sinf.c \
+  math/s_tanf.c \
 )
 
 src += $(addprefix eadk/,\

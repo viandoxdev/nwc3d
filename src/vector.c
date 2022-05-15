@@ -13,6 +13,9 @@ void vector_ensure_allocated(Vector* vec, size_t size) {
 	if(vec->allocated < size)
 		vec->data = realloc(vec->data, vec->data_size * (vec->allocated * 2 >= size ? (vec->allocated *= 2) : (vec->allocated = size)));
 }
+void vector_clear(Vector* vec) {
+  vec->used = 0;
+}
 void* vector_get_ptr(Vector* vec, size_t index) {
 	return vec->data + index * vec->data_size;
 }

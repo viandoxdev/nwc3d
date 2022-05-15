@@ -7,4 +7,5 @@
 #define DISPLAY_COMMON_VERTICAL_MARGIN 20
 #define DISPLAY_COMMON_HORIZONTAL_MARGIN 20
 extern const Rect DISPLAY_RECT;
+extern const float DISPLAY_ASPECT;
 #endif

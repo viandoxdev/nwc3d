@@ -37,8 +37,8 @@ void framebuffer_line(Framebuffer * fb, Point a, Point b, Color color) {
   }
 }
 
-// efficiently set a raw of the framebuffer to one color
-void framebuffer_set_raw(Framebuffer * fb, uint16_t y, uint16_t x0, uint16_t x1, Color color) {
+// efficiently set a row of the framebuffer to one color
+void framebuffer_set_row(Framebuffer * fb, uint16_t y, uint16_t x0, uint16_t x1, Color color) {
   assert(x0 <= x1);
   uint16_t width = x1 - x0;
 #if FB_VIRT
@@ -85,7 +85,7 @@ void framebuffer_triangle(Framebuffer * fb, Triangle tri, Color color) {
   for (uint16_t y = 0; y < height; y++) {
     uint16_t x0 = TRIANGLE_BOUNDS_MIN[y];
     uint16_t x1 = TRIANGLE_BOUNDS_MAX[y];
-    framebuffer_set_raw(fb, y, x0, x1, color);
+    framebuffer_set_row(fb, y + min_y, x0, x1, color);
   }
 }
 

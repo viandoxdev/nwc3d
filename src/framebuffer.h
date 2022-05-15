@@ -21,7 +21,7 @@ typedef struct {
 Framebuffer framebuffer_new();
 void framebuffer_set_pixel(Framebuffer * fb, Point pixel, Color color);
 void framebuffer_line(Framebuffer * fb, Point a, Point b, Color color);
-void framebuffer_set_raw(Framebuffer * fb, uint16_t y, uint16_t x0, uint16_t x1, Color color);
+void framebuffer_set_row(Framebuffer * fb, uint16_t y, uint16_t x0, uint16_t x1, Color color);
 void _bounds_line(Point a, Point b, uint16_t yoffset);
 void framebuffer_triangle(Framebuffer * fb, Triangle tri, Color color);
 void framebuffer_clear(Framebuffer * fb, Color clear_color);

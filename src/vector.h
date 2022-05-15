@@ -38,6 +38,8 @@ void vector_unshift_array(Vector* vec, void* data, size_t length);
 // mostly meant for private usages,
 // ensure that the vector VEC has enough allocated memory for size members.
 void vector_ensure_allocated(Vector* vec, size_t size); 
+// clear the vector
+void vector_clear(Vector* vec);
 // shrink the vector VEC to only have just enough memory for its members
 void vector_shrink(Vector* vec); 
 // overwrite the value of vector VEC at index INDEX

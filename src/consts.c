@@ -13,3 +13,4 @@ const Color CLR_WHITE      = 0xFFFF;
 const Color CLR_YELLOW     = 0xF5A8;
 // display.h
 const Rect DISPLAY_RECT = {0, 0, DISPLAY_WIDTH, DISPLAY_HEIGHT};
+const float DISPLAY_ASPECT = (float) DISPLAY_WIDTH / (float) DISPLAY_HEIGHT;
